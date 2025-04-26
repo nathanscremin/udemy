@@ -10,10 +10,14 @@ local num2 = tonumber(io.read())
 print("Qual operacao voce deseja realizar? (+-*/)")
 local op = io.read()
 
-local res
+local res = 0
 
 if op == "/" then
-    res = num1 / num2
+    if num2 ~= 0 then
+        res = num1 / num2 
+    else
+        print("Divisao impossivel.")
+    end
 elseif op == "*" then
     res = num1 * num2
 elseif op == "-" then
